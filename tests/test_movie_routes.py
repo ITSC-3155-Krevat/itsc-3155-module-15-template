@@ -38,15 +38,6 @@ def test_get_single_movie(test_app: FlaskClient):
     assert '<h2>Christopher Nolan</h2>' in page_data
 
 
-def test_get_single_movie_404(test_app: FlaskClient):
-    refresh_db()
-    test_movie = create_movie()
-
-    res = test_app.get(f'/movies/1')
-
-    assert res.status_code == 404
-
-
 def test_create_movie(test_app: FlaskClient):
     refresh_db()
 
