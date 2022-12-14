@@ -1,4 +1,8 @@
 import os
+from flask.testing import FlaskClient
+
+from src.models import Movie
+
 
 from dotenv import load_dotenv
 from flask import Flask, abort, redirect, render_template, request
